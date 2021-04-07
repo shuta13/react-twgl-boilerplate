@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -27,8 +28,24 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'public/'),
     port: 3000,
-    publicPath: 'http://localhost:3000/dist/',
-    hotOnly: true,
+    publicPath: 'http://localhost:3000/',
+    hot: true,
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      inject: false,
+    }),
+  ],
+  optimization: {
+    minimizer: [
+      (compiler) => {
+        const TerserPlugin = require('terser-webpack-plugin');
+        new TerserPlugin({
+          extractComments: false,
+        }).apply(compiler);
+      },
+    ],
+  },
 };
