@@ -1,9 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+
+import { Router } from './routes/Router';
+import { history } from './routes/history';
+import { routes } from './routes';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router
+      history={history}
+      routes={routes}
+      fallback={<div>loading...</div>}
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );
