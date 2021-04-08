@@ -8,10 +8,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "webpack serve --mode development",
+    "dev": "webpack serve --mode development --open",
     "build": "yarn clean && webpack",
     "watch": "yarn clean && webpack --watch",
-    "start": "yarn build && http-server ./dist",
+    "start": "webpack serve --mode production --open",
     "clean": "rimraf dist/"
   },
   "dependencies": {
