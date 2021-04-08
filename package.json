@@ -1,7 +1,7 @@
 {
   "name": "react-twgl-boilerplate",
   "version": "0.1.0",
-  "description": "Boilerplate includes React, TWGL.js",
+  "description": "This is boilerplate includes React, TWGL.js & sandbox of WebGL",
   "keywords": [
     "react",
     "webpack",

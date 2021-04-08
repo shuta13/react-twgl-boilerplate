@@ -6,7 +6,6 @@ import { useLocation } from './useLocation';
 
 export const useRouter = (routes: Routes, history: History<any>) => {
   const location = useLocation(history);
-  console.log(location);
   const router = useMemo(() => new UniversalRouter(routes), [routes]);
   const [Component, setComponent] = useState<React.ElementType>('div');
   useEffect(() => {
