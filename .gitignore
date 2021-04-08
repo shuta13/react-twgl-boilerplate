@@ -90,3 +90,6 @@ typings/
 .dynamodb/
 
 dist/
+
+# linaria
+.linaria-cache/
