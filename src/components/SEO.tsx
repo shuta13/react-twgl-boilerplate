@@ -26,7 +26,7 @@ const jsonLd = (args: typeof DefaultJsonLd) => {
       author: {
         '@type': 'Person',
         name: 'did0es',
-        url: 'https://did0es.me',
+        url: 'https://react-twgl-boilerplate.did0es.me',
       },
       publisher: {
         '@type': 'Organization',
@@ -34,7 +34,7 @@ const jsonLd = (args: typeof DefaultJsonLd) => {
         url: 'https://did0es.me',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://blog.did0es.me/images/icon.png',
+          url: 'https://react-twgl-boilerplate.did0es.me/images/icon.png',
         },
       },
       datePublished: updated,
@@ -48,13 +48,7 @@ const jsonLd = (args: typeof DefaultJsonLd) => {
           '@type': 'ListItem',
           position: 1,
           name: Title,
-          item: 'https://blog.did0es.me',
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: title,
-          item: url,
+          item: 'https://react-twgl-boilerplate.did0es.me',
         },
       ],
     },
