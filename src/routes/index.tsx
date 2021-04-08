@@ -12,4 +12,8 @@ export const routes: Routes = [
     path: '/health',
     action: () => import('../pages/Health'),
   },
+  {
+    path: '/sandbox',
+    action: () => import('../pages/sandbox'),
+  },
 ];

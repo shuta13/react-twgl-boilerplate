@@ -4725,6 +4725,11 @@ tslib@^2.0.3:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
   integrity sha512-gS9GVHRU+RGn5KQM2rllAlR3dU6m7AcpJKdtH8gFvQiC4Otgk98XnmMU+nZenHt/+VhnBPWwgrJsyrdcw6i23w==
 
+twgl.js@^4.19.1:
+  version "4.19.1"
+  resolved "https://registry.yarnpkg.com/twgl.js/-/twgl.js-4.19.1.tgz#bf7216ae4d6aff333c5511b612e674b7672b2ea2"
+  integrity sha512-zI28+xIQskBXpnoX9rsJ2n6zrx0AN3yFZASyp4u1IBscndUKlzRBwNtnD17BoO+RzQieuJksPzJKy8H6lRa97A==
+
 type-is@~1.6.17, type-is@~1.6.18:
   version "1.6.18"
   resolved "https://registry.yarnpkg.com/type-is/-/type-is-1.6.18.tgz#4e552cd05df09467dcbc4ef739de89f2cf37c131"
