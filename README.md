@@ -8,4 +8,4 @@
 - TypeScript (4.x)
 - [Linaria](https://github.com/callstack/linaria#readme) (2.x)
 - [Universal Router](https://github.com/kriasoft/universal-router#readme) (9.x)
-- [TWGL.js](https://github.com/greggman/twgl.js#readme) ()
+- [TWGL.js](https://github.com/greggman/twgl.js#readme) (4.x)
