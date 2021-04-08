@@ -72,22 +72,25 @@ export const SEO: React.FC<Props> = (props) => {
       <meta name="twitter:title" content={`${title}`} />
       <meta
         name="twitter:image"
-        content="https://blog.did0es.me/images/og.png"
+        content="https://react-twgl-boilerplate.did0es.me/images/og.png"
       />
       <meta name="twitter:description" content={`${description}`} />
       <meta property="og:locale" content="ja_JP" />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://blog.did0es.me" />
+      <meta
+        property="og:url"
+        content="https://react-twgl-boilerplate.did0es.me.did0es.me"
+      />
       <meta property="og:title" content={`${title}`} />
       <meta property="og:site_name" content={`${title}`} />
       <meta property="og:description" content={`${description}`} />
       <meta
         property="og:image"
-        content="https://blog.did0es.me/images/og.png"
+        content="https://react-twgl-boilerplate.did0es.me.did0es.me/images/og.png"
       />
       <meta
         property="og:image:secure_url"
-        content="https://blog.did0es.me/images/og.png"
+        content="https://react-twgl-boilerplate.did0es.me.images/og.png"
       />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
