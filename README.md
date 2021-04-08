@@ -1,3 +1,2 @@
-# twgl-sandbox
+# react-twgl-boilerplate
 
-### React のボイラープレート化したなあ(575)
