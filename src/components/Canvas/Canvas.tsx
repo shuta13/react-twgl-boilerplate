@@ -1,4 +1,11 @@
-import * as twgl from 'twgl.js';
+import {
+  createBufferInfoFromArrays,
+  createProgramInfo,
+  drawBufferInfo,
+  resizeCanvasToDisplaySize,
+  setBuffersAndAttributes,
+  setUniforms,
+} from 'twgl.js';
 import { css } from '@linaria/core';
 
 export const Canvas: React.FC = () => {
@@ -9,7 +16,7 @@ export const Canvas: React.FC = () => {
 
     if (gl == null) return;
 
-    const programInfo = twgl.createProgramInfo(gl, [
+    const programInfo = createProgramInfo(gl, [
       `
 attribute vec4 position;
 
@@ -40,12 +47,12 @@ void main() {
     const arrays = {
       position: [-1, -1, 0, 1, -1, 0, -1, 1, 0, -1, 1, 0, 1, -1, 0, 1, 1, 0],
     };
-    const bufferInfo = twgl.createBufferInfoFromArrays(gl, arrays);
+    const bufferInfo = createBufferInfoFromArrays(gl, arrays);
 
     function render(time: number) {
       if (!gl?.canvas) return;
 
-      twgl.resizeCanvasToDisplaySize(gl.canvas as HTMLCanvasElement);
+      resizeCanvasToDisplaySize(gl.canvas as HTMLCanvasElement);
       gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
 
       const uniforms = {
@@ -54,9 +61,9 @@ void main() {
       };
 
       gl.useProgram(programInfo.program);
-      twgl.setBuffersAndAttributes(gl, programInfo, bufferInfo);
-      twgl.setUniforms(programInfo, uniforms);
-      twgl.drawBufferInfo(gl, bufferInfo);
+      setBuffersAndAttributes(gl, programInfo, bufferInfo);
+      setUniforms(programInfo, uniforms);
+      drawBufferInfo(gl, bufferInfo);
 
       requestAnimationFrame(render);
     }
