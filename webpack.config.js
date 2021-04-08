@@ -1,16 +1,16 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
-const isDevelopment = process.env.NODE_ENV !== 'production';
+const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  mode: isDevelopment ? 'development' : 'production',
+  mode: 'production',
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist/'),
-    filename: 'js/bundle.js',
+    filename: 'js/bundle.[chunkhash].js',
+    chunkFilename: 'js/chunk.[chunkhash].js',
   },
   module: {
     rules: [
@@ -20,11 +20,6 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
-            options: {
-              plugins: [
-                isDevelopment && require.resolve('react-refresh/babel'),
-              ].filter(Boolean),
-            },
           },
         ],
       },
@@ -41,13 +36,20 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    isDevelopment && new webpack.HotModuleReplacementPlugin(),
-    isDevelopment && new ReactRefreshWebpackPlugin(),
+    !IS_PRODUCTION && new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
   ],
   optimization: {
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        defaultVendors: {
+          test: /react|react-dom|react-router/,
+        },
+      },
+    },
     minimizer: [
       (compiler) => {
         const TerserPlugin = require('terser-webpack-plugin');
