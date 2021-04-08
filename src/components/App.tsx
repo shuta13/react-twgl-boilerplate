@@ -2,10 +2,12 @@ import React from 'react';
 import { history, Router, routes } from '../routes';
 import { css } from '@linaria/core';
 import { ColorPallette } from '../config/style/variables';
+import { SEO } from './SEO';
 
 const App: React.FC = () => {
   return (
     <React.StrictMode>
+      <SEO />
       <Router
         history={history}
         routes={routes}
