@@ -12,9 +12,6 @@ const Home: React.FC = () => {
       <nav>
         <ul>
           <li>
-            <Link href="/health">health</Link>
-          </li>
-          <li>
             <Link href="/sandbox">sandbox</Link>
           </li>
         </ul>

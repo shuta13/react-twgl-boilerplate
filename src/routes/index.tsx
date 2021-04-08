@@ -9,10 +9,6 @@ export const routes: Routes = [
     action: () => import('../pages/Home'),
   },
   {
-    path: '/health',
-    action: () => import('../pages/Health'),
-  },
-  {
     path: '/sandbox',
     action: () => import('../pages/sandbox'),
   },
