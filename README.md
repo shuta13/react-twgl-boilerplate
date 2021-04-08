@@ -1,6 +1,6 @@
 # react-twgl-boilerplate
 
-> Boilerplate includes React + TWGL.js
+> This is boilerplate includes React, TWGL.js & sandbox of WebGL
 
 - React (17.x)
 - TypeScript (4.x)
