@@ -73,7 +73,7 @@ module.exports = {
       template: './public/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'styles.[contenthash].css',
+      filename: 'css/styles.[contenthash].css',
     }),
   ],
   optimization: {
