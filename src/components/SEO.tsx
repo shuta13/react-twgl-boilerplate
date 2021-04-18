@@ -79,14 +79,14 @@ export const SEO: React.FC<Props> = (props) => {
       <meta property="og:type" content="website" />
       <meta
         property="og:url"
-        content="https://react-twgl-boilerplate.did0es.me.did0es.me"
+        content="https://react-twgl-boilerplate.did0es.me"
       />
       <meta property="og:title" content={`${title}`} />
       <meta property="og:site_name" content={`${title}`} />
       <meta property="og:description" content={`${description}`} />
       <meta
         property="og:image"
-        content="https://react-twgl-boilerplate.did0es.me.did0es.me/images/og.png"
+        content="https://react-twgl-boilerplate.did0es.me/images/og.png"
       />
       <meta
         property="og:image:secure_url"
